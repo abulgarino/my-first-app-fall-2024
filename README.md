@@ -57,26 +57,30 @@ ALPHAVANTAGE_API_KEY="..."
 ```sh
 #ALPHAVANTAGE_API_KEY="..." python app/unemployment.py
 
-python app/unemployment.py
+# python app/unemployment.py
+
+python -m app.unemployment
 ```
 
 
 Run the stocks report:
 
 ```sh
-python app/stocks.py
+#python app/stocks.py
+
+python -m app/stocks
 ```
 
 Run the email sender:
 
 ```sh
-python app/email_service.py
+python app/email_service
 ```
 
 Run the RPS game:
 
 ```sh
-python app/rps.py
+python app/rps
 ```
 
 ## Testing
