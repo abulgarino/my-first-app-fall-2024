@@ -1,15 +1,10 @@
 # LOCAL DEV (ENV VARS)
 
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
-
-API_KEY = os.getenv("ALPHAVANTAGE_API_KEY", default="demo")
-
+from app.alpha_service import API_KEY
 import requests
 import json
 from pprint import pprint
+from plotly.express import line
 
 request_url = f"https://www.alphavantage.co/query?function=UNEMPLOYMENT&apikey={API_KEY}"
 
@@ -52,7 +47,6 @@ print("NO MONTHS:", len(this_year))
 #
 # Plot a line chart of unemployment rates over time.
 
-from plotly.express import line
 
 dates = [d["date"] for d in data]
 rates = [float(d["value"]) for d in data]
